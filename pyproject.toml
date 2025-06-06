@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "setuptools>=64",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cseo"
+version = "0.1"
+description = ""
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["benchmark", "config", "llms", "methods", "data"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

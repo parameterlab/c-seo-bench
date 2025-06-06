@@ -1,0 +1,8 @@
+datasets==3.6.0
+openai==1.78.1
+anthropic==0.45.0
+jupyter
+huggingface_hub
+ipykernel
+scipy==1.15.3
+statsmodels==0.14.4
