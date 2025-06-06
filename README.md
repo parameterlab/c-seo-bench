@@ -34,7 +34,7 @@ cd scripts
 python download_results.py
 ```
 
-It will create a folder in the root of the project called cseo_results. The folder will have the following structure `{partition}/{method}/{model}`. In each leaf folder you will find two files:"
+It will create a folder in the root of the project called cseo_results. The folder will have the following structure `{partition}/{method}/{model}`. In each leaf folder you will find two files:
 * `cost.json`: the cost of running the experiment
 * `responses.parquet` a file to be open with pandas including the prompt, response, and list of extracted citations from the responses.
 
