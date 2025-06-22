@@ -1,5 +1,4 @@
-
-[![🤗 Dataset](https://img.shields.io/badge/HuggingFace-C--SEO--Bench-blue?logo=huggingface&style=flat-square)](https://huggingface.co/datasets/parameterlab/c-seo-bench) [![🤗 Results](https://img.shields.io/badge/HuggingFace-Results-blue?logo=huggingface&style=flat-square)](https://huggingface.co/datasets/parameterlab/c-seo-results)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.11097-b31b1b.svg)](https://arxiv.org/abs/2506.11097) [![🤗 Dataset](https://img.shields.io/badge/HuggingFace-C--SEO--Bench-blue?logo=huggingface&style=flat-square)](https://huggingface.co/datasets/parameterlab/c-seo-bench) [![🤗 Results](https://img.shields.io/badge/HuggingFace-Results-blue?logo=huggingface&style=flat-square)](https://huggingface.co/datasets/parameterlab/c-seo-results)
 
 ![C-SEO Bench authors and affiliations](./assets/logos.png)
 
@@ -7,13 +6,31 @@ This repository includes the code to i) run C-SEO methods to improve documents, 
 
 Developed at [Parameter Lab](https://parameterlab.de/) with the support of [Naver AI Lab](https://clova.ai/en/ai-research).
 
+<span id="c-seo-bench-description"></span>
+![C-SEO Description](./assets/cseo_diagram.png)
 
-![C-SEO Bench Description](./assets/teaser.png)
 
 
 > **Abstract**:
 Large Language Models (LLMs) are transforming search engines into Conversational Search Engines (CSE). Consequently, Search Engine Optimization (SEO) is being shifted into Conversational Search Engine Optimization (C-SEO). We are beginning to see dedicated C-SEO methods for modifying web documents to increase their visibility in CSE responses. However, they are often tested only for a limited breadth of application domains; we do not understand whether certain C-SEO methods would be effective for a broad range of domains. Moreover, existing evaluations consider only a single-actor scenario where only one web document adopts a C-SEO method; in reality, multiple players are likely to competitively adopt the cutting-edge C-SEO techniques, drawing an analogy from the dynamics we have seen in SEO. We present C-SEO Bench, the first benchmark designed to evaluate C-SEO methods across multiple tasks, domains, and number of actors. We consider two search tasks, question answering and product recommendation, with three domains each. We also formalize a new evaluation protocol with varying adoption rates among involved actors. Our experiments reveal that most current C-SEO methods are largely ineffective, contrary to reported results in the literature. Instead, traditional SEO strategies, those aiming to improve the ranking of the source in the LLM context, are significantly more effective. We also observe that as we increase the number of C-SEO adopters, the overall gains decrease, depicting a congested and zero-sum nature of the problem.
 
+# C-SEO Benchmark
+
+In this paper, we introduce a new benchmark, C-SEO Bench, to evaluate C-SEO methods across
+tasks, domains, and number of actors. We focus on two common tasks for current CSE applications, answering web questions and product recommendations. Real-life applications are Perplexity.ai, ChatGPT Search, Google AI Search, Amazon Rufus and ChatGPT Product Recommendation. 
+
+* Web Question domains:
+    * News
+    * Debates
+    * General web content
+
+* Product recommendation domains:
+    * Retail products
+    * Video games
+    * Books. 
+    
+We measure the effectiveness of C-SEO methods by the improvement in the citation ranking (as shown in the [first figure](#c-seo-bench-description)).
+![C-SEO Bench Description](./assets/teaser.png)
 
 # How to Use
 
@@ -66,6 +83,20 @@ After improving the documents with a C-SEO method (step 2), now you can run the 
 ## 4. Run the Evaluation
 
 If you want to evaluate the results from the paper, you can download the results from [https://huggingface.co/datasets/parameterlab/c-seo-results](https://huggingface.co/datasets/parameterlab/c-seo-results) and then run `notebooks/4_evaluation.ipynb`. You can also use this notebook to evaluate your own results obtained from the prior steps. This notebook will calculate the increase in the rankings of a document improved by a C-SEO method. Don't forget to run step 3 without running any C-SEO method too (i.e., the baseline).
+
+
+# Cite
+If you find our work useful, please consider citing it using the following citation:
+```bibtex
+@misc{puerto2025cseo,
+    title={C-SEO Bench: Does Conversational SEO Work?},
+    author={Haritz Puerto and Martin Gubri and Tommaso Green and Seong Joon Oh and Sangdoo Yun},
+    year={2025},
+    eprint={2506.11097},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+```
 
 
 ## Credits
