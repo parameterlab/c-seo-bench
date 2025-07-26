@@ -41,6 +41,7 @@ First, install the requirements
 conda create --name cseo python=3.12
 conda activate cseo
 pip install -e .
+pip install -r requirements.txt
 ```
 Update the keys from your OpenAI/Anthropic accounts in `config.json`.
 
