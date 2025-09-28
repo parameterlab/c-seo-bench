@@ -89,13 +89,13 @@ If you want to evaluate the results from the paper, you can download the results
 # Cite
 If you find our work useful, please consider citing it using the following citation:
 ```bibtex
-@misc{puerto2025cseo,
-    title={C-SEO Bench: Does Conversational SEO Work?},
-    author={Haritz Puerto and Martin Gubri and Tommaso Green and Seong Joon Oh and Sangdoo Yun},
-    year={2025},
-    eprint={2506.11097},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+@inproceedings{
+  puerto2025cseo,
+  title={C-{SEO} Bench: Does Conversational {SEO} Work?},
+  author={Haritz Puerto and Martin Gubri and Tommaso Green and Seong Joon Oh and Sangdoo Yun},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2025},
+  url={https://openreview.net/forum?id=oTeixD3oZO}
 }
 ```
 
